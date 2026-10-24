@@ -15,6 +15,12 @@
     },
     "test": {
       "dependsOn": ["^build"]
+    },
+    "@open-apiary/example-api#typecheck": {
+      "dependsOn": ["build", "^build"]
+    },
+    "@open-apiary/example-api#test": {
+      "dependsOn": ["build", "^build"]
     }
   }
 }

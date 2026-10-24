@@ -10,6 +10,7 @@ export default defineConfig({
     projects: [
       "packages/*/vitest.config.ts",
       "integrations/*/vitest.config.ts",
+      "examples/*/vitest.config.ts",
     ],
     passWithNoTests: true,
     coverage: {

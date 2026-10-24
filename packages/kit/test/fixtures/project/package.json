@@ -1,0 +1,10 @@
+{
+  "name": "@open-apiary/kit-fixture",
+  "version": "1.2.3",
+  "private": true,
+  "type": "module",
+  "dependencies": {
+    "@open-apiary/schema": "0.0.0",
+    "zod": "^4.0.0"
+  }
+}

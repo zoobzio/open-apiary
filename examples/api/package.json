@@ -1,0 +1,34 @@
+{
+  "name": "@open-apiary/example-api",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "main": "./.dist/index.mjs",
+  "types": "./.dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./.dist/index.d.mts",
+      "import": "./.dist/index.mjs"
+    },
+    "./openapi.json": "./.dist/openapi.json",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "build": "apiary build",
+    "stub": "apiary build",
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "open-apiary": "workspace:*",
+    "zod": "catalog:"
+  },
+  "devDependencies": {
+    "@open-apiary/kit": "workspace:*",
+    "@open-apiary/testing": "workspace:*",
+    "@types/node": "catalog:",
+    "typescript": "catalog:",
+    "vitest": "catalog:"
+  }
+}

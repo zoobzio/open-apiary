@@ -28,5 +28,11 @@
   "dependencies": {
     "@open-apiary/core": "workspace:*",
     "@open-apiary/schema": "workspace:*"
+  },
+  "peerDependencies": {
+    "zod": "catalog:peers"
+  },
+  "devDependencies": {
+    "zod": "catalog:"
   }
 }

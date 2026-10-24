@@ -15,8 +15,12 @@
       "import": "./.dist/index.mjs"
     }
   },
+  "bin": {
+    "apiary": "./bin/apiary.mjs"
+  },
   "files": [
-    ".dist"
+    ".dist",
+    "bin"
   ],
   "scripts": {
     "build": "obuild",
@@ -26,10 +30,15 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@open-apiary/core": "workspace:*",
-    "@open-apiary/schema": "workspace:*"
+    "@open-apiary/schema": "workspace:*",
+    "jiti": "catalog:",
+    "obuild": "catalog:"
+  },
+  "peerDependencies": {
+    "zod": "catalog:peers"
   },
   "devDependencies": {
-    "@types/node": "catalog:"
+    "@types/node": "catalog:",
+    "zod": "catalog:"
   }
 }

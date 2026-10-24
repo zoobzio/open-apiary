@@ -1,6 +1,7 @@
 packages:
   - "packages/*"
   - "integrations/*"
+  - "examples/*"
 
 catalog:
   "@changesets/changelog-github": "^0.7.0"
@@ -9,7 +10,9 @@ catalog:
   "@nuxt/schema": "^4.4.6"
   "@types/node": "^25.9.1"
   "@vitest/coverage-v8": "^5.0.3"
+  "h3": "^1.15.0"
   "jiti": "^2.7.0"
+  "nitropack": "^2.13.0"
   "nuxt": "^4.4.6"
   "obuild": "^0.4.44"
   "oxfmt": "^0.71.0"
@@ -17,3 +20,8 @@ catalog:
   "turbo": "^2.11.7"
   "typescript": "^6.0.3"
   "vitest": "^5.0.3"
+  "zod": "^4.3.0"
+
+catalogs:
+  peers:
+    "zod": "^4.0.0"

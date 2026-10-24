@@ -1,6 +1,7 @@
 node_modules
 dist
 .dist
+.apiary
 .nuxt
 .output
 .coverage

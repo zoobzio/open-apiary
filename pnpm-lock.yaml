@@ -24,9 +24,15 @@ catalogs:
     '@vitest/coverage-v8':
       specifier: ^5.0.3
       version: 5.0.5
+    h3:
+      specifier: ^1.15.0
+      version: 1.15.11
     jiti:
       specifier: ^2.7.0
       version: 2.7.0
+    nitropack:
+      specifier: ^2.13.0
+      version: 2.13.5
     nuxt:
       specifier: ^4.4.6
       version: 4.6.2
@@ -48,6 +54,9 @@ catalogs:
     vitest:
       specifier: ^5.0.3
       version: 5.0.5
+    zod:
+      specifier: ^4.3.0
+      version: 4.6.7
 
 importers:
 
@@ -84,14 +93,39 @@ importers:
         specifier: 'catalog:'
         version: 5.0.5(@types/node@25.9.9)(@vitest/coverage-v8@5.0.5)(vite@8.3.5(@types/node@25.9.9)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2))
 
+  examples/api:
+    dependencies:
+      open-apiary:
+        specifier: workspace:*
+        version: link:../../packages/open-apiary
+      zod:
+        specifier: 'catalog:'
+        version: 4.6.7
+    devDependencies:
+      '@open-apiary/kit':
+        specifier: workspace:*
+        version: link:../../packages/kit
+      '@open-apiary/testing':
+        specifier: workspace:*
+        version: link:../../packages/testing
+      '@types/node':
+        specifier: 'catalog:'
+        version: 25.9.9
+      typescript:
+        specifier: 'catalog:'
+        version: 6.0.3
+      vitest:
+        specifier: 'catalog:'
+        version: 5.0.5(@types/node@25.9.9)(@vitest/coverage-v8@5.0.5)(vite@8.3.5(@types/node@25.9.9)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2))
+
   integrations/nuxt:
     dependencies:
       '@nuxt/kit':
         specifier: 'catalog:'
         version: 4.6.2(@nuxt/schema@4.6.2)(confbox@0.3.1)(dotenv@17.4.2)(giget@3.3.1)(jiti@2.7.0)(magic-string@1.4.3)(mlly@1.8.2)(rolldown@1.2.15)(unplugin@3.4.0(esbuild@0.28.2)(rolldown@1.2.15)(rollup@4.65.0)(vite@8.3.5(@types/node@25.9.9)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2)))
-      '@open-apiary/kit':
-        specifier: workspace:*
-        version: link:../../packages/kit
+      h3:
+        specifier: 'catalog:'
+        version: 1.15.11
       open-apiary:
         specifier: workspace:*
         version: link:../../packages/open-apiary
@@ -99,31 +133,50 @@ importers:
       '@nuxt/schema':
         specifier: 'catalog:'
         version: 4.6.2
+      '@open-apiary/testing':
+        specifier: workspace:*
+        version: link:../../packages/testing
       '@types/node':
         specifier: 'catalog:'
         version: 25.9.9
+      nitropack:
+        specifier: 'catalog:'
+        version: 2.13.5(rolldown@1.2.15)(srvx@1.0.7)(vite@8.3.5(@types/node@25.9.9)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2))
       nuxt:
         specifier: 'catalog:'
         version: 4.6.2(@babel/plugin-syntax-jsx@7.29.7(@babel/core@7.29.7))(@babel/plugin-syntax-typescript@7.29.7(@babel/core@7.29.7))(@oxc-project/types@0.155.0)(@types/node@25.9.9)(@vue/compiler-sfc@3.5.44)(acorn@8.19.0)(confbox@0.3.1)(db0@0.3.4)(dotenv@17.4.2)(esbuild@0.28.2)(giget@3.3.1)(ioredis@5.11.1)(lightningcss@1.33.0)(mlly@1.8.2)(oxlint@1.89.0)(rolldown@1.2.15)(rollup-plugin-visualizer@7.1.1(rolldown@1.2.15)(rollup@4.65.0))(rollup@4.65.0)(srvx@1.0.7)(terser@5.51.2)(typescript@6.0.3)(vite@8.3.5(@types/node@25.9.9)(esbuild@0.28.2)(jiti@2.7.0)(terser@5.51.2))
+      zod:
+        specifier: 'catalog:'
+        version: 4.6.7
 
   packages/core:
     dependencies:
       '@open-apiary/schema':
         specifier: workspace:*
         version: link:../schema
+    devDependencies:
+      zod:
+        specifier: 'catalog:'
+        version: 4.6.7
 
   packages/kit:
     dependencies:
-      '@open-apiary/core':
-        specifier: workspace:*
-        version: link:../core
       '@open-apiary/schema':
         specifier: workspace:*
         version: link:../schema
+      jiti:
+        specifier: 'catalog:'
+        version: 2.7.0
+      obuild:
+        specifier: 'catalog:'
+        version: 0.4.45(dotenv@17.4.2)(giget@3.3.1)(jiti@2.7.0)(magicast@0.5.5)(typescript@6.0.3)
     devDependencies:
       '@types/node':
         specifier: 'catalog:'
         version: 25.9.9
+      zod:
+        specifier: 'catalog:'
+        version: 4.6.7
 
   packages/open-apiary:
     dependencies:
@@ -133,14 +186,19 @@ importers:
       '@open-apiary/schema':
         specifier: workspace:*
         version: link:../schema
+    devDependencies:
+      zod:
+        specifier: 'catalog:'
+        version: 4.6.7
 
-  packages/schema: {}
+  packages/schema:
+    devDependencies:
+      zod:
+        specifier: 'catalog:'
+        version: 4.6.7
 
   packages/testing:
     dependencies:
-      '@open-apiary/kit':
-        specifier: workspace:*
-        version: link:../kit
       open-apiary:
         specifier: workspace:*
         version: link:../open-apiary
@@ -148,6 +206,9 @@ importers:
       '@types/node':
         specifier: 'catalog:'
         version: 25.9.9
+      zod:
+        specifier: 'catalog:'
+        version: 4.6.7
 
 packages:
 
@@ -3859,6 +3920,9 @@ packages:
   zip-stream@6.0.1:
     resolution: {integrity: sha512-zK7YHHz4ZXpW89AHXUPbQVGKI7uvkd3hzusTdotCg1UxyaVtg0zFJSTfW/Dq5f7OBBVnq6cZIaC8Ti4hb6dtCA==}
     engines: {node: '>= 14'}
+
+  zod@4.6.7:
+    resolution: {integrity: sha512-g8W2D2kU6a8untc053fX1uVBKzM7yqAxW/3zwk83+6RyF2+SKOuV+c0wBDhUwzV1PaGapmZH+rmcUzPf+3CGwg==}
 
 snapshots:
 
@@ -7783,3 +7847,5 @@ snapshots:
       archiver-utils: 5.0.2
       compress-commons: 6.0.2
       readable-stream: 4.8.0
+
+  zod@4.6.7: {}

@@ -26,10 +26,13 @@
     "test": "vitest run"
   },
   "dependencies": {
-    "@open-apiary/kit": "workspace:*",
     "open-apiary": "workspace:*"
   },
+  "peerDependencies": {
+    "zod": "catalog:peers"
+  },
   "devDependencies": {
-    "@types/node": "catalog:"
+    "@types/node": "catalog:",
+    "zod": "catalog:"
   }
 }

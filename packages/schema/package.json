@@ -24,5 +24,11 @@
     "lint": "oxlint",
     "typecheck": "tsc --noEmit",
     "test": "vitest run"
+  },
+  "peerDependencies": {
+    "zod": "catalog:peers"
+  },
+  "devDependencies": {
+    "zod": "catalog:"
   }
 }

@@ -13,6 +13,10 @@
     ".": {
       "types": "./.dist/module.d.mts",
       "import": "./.dist/module.mjs"
+    },
+    "./constant": {
+      "types": "./.dist/constant.d.mts",
+      "import": "./.dist/constant.mjs"
     }
   },
   "files": [
@@ -27,12 +31,15 @@
   },
   "dependencies": {
     "@nuxt/kit": "catalog:",
-    "@open-apiary/kit": "workspace:*",
+    "h3": "catalog:",
     "open-apiary": "workspace:*"
   },
   "devDependencies": {
     "@nuxt/schema": "catalog:",
+    "@open-apiary/testing": "workspace:*",
     "@types/node": "catalog:",
-    "nuxt": "catalog:"
+    "nitropack": "catalog:",
+    "nuxt": "catalog:",
+    "zod": "catalog:"
   }
 }

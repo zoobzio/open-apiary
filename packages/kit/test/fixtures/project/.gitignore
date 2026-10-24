@@ -1,0 +1,5 @@
+.dist
+.apiary
+# The scan must skip this directory, so the fixture keeps one. The root
+# `.gitignore` would drop it.
+!src/node_modules/
