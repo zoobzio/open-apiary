@@ -1,0 +1,35 @@
+{
+  "name": "@open-apiary/testing",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoobzio/open-apiary.git",
+    "directory": "packages/testing"
+  },
+  "type": "module",
+  "main": "./.dist/index.mjs",
+  "types": "./.dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./.dist/index.d.mts",
+      "import": "./.dist/index.mjs"
+    }
+  },
+  "files": [
+    ".dist"
+  ],
+  "scripts": {
+    "build": "obuild",
+    "stub": "obuild --stub",
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@open-apiary/kit": "workspace:*",
+    "open-apiary": "workspace:*"
+  },
+  "devDependencies": {
+    "@types/node": "catalog:"
+  }
+}

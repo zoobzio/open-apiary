@@ -1,0 +1,38 @@
+{
+  "name": "@open-apiary/nuxt",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zoobzio/open-apiary.git",
+    "directory": "integrations/nuxt"
+  },
+  "type": "module",
+  "main": "./.dist/module.mjs",
+  "types": "./.dist/module.d.mts",
+  "exports": {
+    ".": {
+      "types": "./.dist/module.d.mts",
+      "import": "./.dist/module.mjs"
+    }
+  },
+  "files": [
+    ".dist"
+  ],
+  "scripts": {
+    "build": "obuild",
+    "stub": "obuild --stub",
+    "lint": "oxlint",
+    "typecheck": "tsc --noEmit",
+    "test": "vitest run"
+  },
+  "dependencies": {
+    "@nuxt/kit": "catalog:",
+    "@open-apiary/kit": "workspace:*",
+    "open-apiary": "workspace:*"
+  },
+  "devDependencies": {
+    "@nuxt/schema": "catalog:",
+    "@types/node": "catalog:",
+    "nuxt": "catalog:"
+  }
+}

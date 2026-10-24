@@ -1,0 +1,9 @@
+node_modules
+dist
+.dist
+.nuxt
+.output
+.coverage
+*.log
+.idea
+.turbo

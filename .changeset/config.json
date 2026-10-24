@@ -1,0 +1,25 @@
+{
+  "$schema": "https://unpkg.com/@changesets/config@3.1.1/schema.json",
+  "changelog": [
+    "@changesets/changelog-github",
+    {
+      "repo": "zoobzio/open-apiary"
+    }
+  ],
+  "commit": false,
+  "access": "public",
+  "baseBranch": "main",
+  "fixed": [
+    [
+      "open-apiary",
+      "@open-apiary/core",
+      "@open-apiary/kit",
+      "@open-apiary/schema",
+      "@open-apiary/testing",
+      "@open-apiary/nuxt"
+    ]
+  ],
+  "linked": [],
+  "updateInternalDependencies": "patch",
+  "ignore": []
+}

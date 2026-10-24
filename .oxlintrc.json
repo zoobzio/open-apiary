@@ -1,0 +1,28 @@
+{
+  "$schema": "./node_modules/oxlint/configuration_schema.json",
+  "plugins": ["typescript"],
+  "categories": {
+    "correctness": "error"
+  },
+  "env": {
+    "builtin": true
+  },
+  "ignorePatterns": [
+    "**/dist/",
+    "**/.dist/",
+    "**/.nuxt/",
+    "**/.output/",
+    "**/.generated/"
+  ],
+  "rules": {
+    "no-unused-vars": ["error", { "argsIgnorePattern": "^_" }],
+    "typescript/consistent-type-imports": "error",
+    "typescript/no-empty-object-type": "error"
+  },
+  "overrides": [
+    {
+      "files": ["**/scripts/**/*.mjs"],
+      "env": { "node": true }
+    }
+  ]
+}
